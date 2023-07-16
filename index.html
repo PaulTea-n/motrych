@@ -2,6 +2,7 @@
 <html lang="en">
 <html lang="uk">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,7 @@
     <link rel="icon" type="image/png" href="./img/MOTRYCHSTUDIO — LOGO.png">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@800&display=swap" rel="stylesheet">
-    <script defer src="scripts/script.js"></script>
+
 </head>
 
 <body>
@@ -23,7 +24,7 @@
                     <a href="#">JEWELLERY</a>
                 </li>
                 <li class="menu_item" data-text-en="OBJECTS" data-text-uk="ПРЕДМЕТИ"><a href="#">OBJECTS</a></li>
-                <li class="menu_item"><a href="#">FILMS</a></li>
+                <li class="menu_item" data-text-en="FILMS" data-text-uk="ВІДЕО"><a href="#">FILMS</a></li>
             </ul>
         </nav>
         <a class="main_logo" href="#"><img src="./img/MOTRYCHSTUDIO — LOGO 1.svg" alt="logo"></a>
@@ -36,7 +37,62 @@
             </li>
         </ul>
     </header>
-    <div class="category_menu ">
+
+    <!-- ---------------mob menu-------------------- -->
+    <div class="mobile_menu">
+        <div class="mobile_menu-left">
+            <ul class="menu_left-mob">
+                <li class="menu_item-mob"><a href="#">JEWELLERY</a></li>
+                <li class="menu_item-mob"><a href="#">OBJECTS</a></li>
+                <li class="menu_item-mob"><a href="#">FILMS</a></li>
+            </ul>
+        </div>
+
+
+        <div class="mobile_menu-right">
+            <div class="mobile_menu-one">
+                <span class="col_title ">Edit</span>
+                <ul class="col_list ">
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img1.jpg "><a class="col_list-item " href="# ">NEW COLLECTION</a></li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img2.jpg "><a class="col_list-item " href="# ">IN STOCK</a></li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img3.jpg "><a class="col_list-item " href="# ">CLEAR BLUE SKY</a></li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img4.jpg "><a class="col_list-item " href="# ">ALL PRODUCTS</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile_menu-two">
+                <span class="col_title ">Categories</span>
+                <ul class="col_list ">
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img2.jpg "><a class=" col_list-item earrings_item " href="# ">EARRINGS</a>
+                        <ul class="list_category earrings_list ">
+                            <li><a class="list_category-item " href="# ">View All</a></li>
+                            <li><a class="list_category-item " href="# ">Studs</a></li>
+                            <li><a class="list_category-item " href="# ">Cuffs</a></li>
+                            <li><a class="list_category-item " href="# ">Drops</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img3.jpg "><a class="col_list-item necklages_item " href="# ">NECKLACES</a>
+                        <ul class="list_category necklages_list ">
+                            <li><a class="list_category-item " href="# ">View All</a></li>
+                            <li><a class="list_category-item " href="# ">Chains</a></li>
+                            <li><a class="list_category-item " href="# ">Collar</a></li>
+                            <li><a class="list_category-item " href="# ">Pendants</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img4.jpg "><a class="col_list-item " href="# ">RINGS</a></li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img5.jpg "><a class="col_list-item " href="# ">BRACELETS</a></li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img6.jpg "><a class="col_list-item " href="# ">BAGS</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- ------------------------------------------- -->
+
+    <div class="category_menu">
         <div class="category_menu-block ">
             <div class="cols col-1 ">
                 <span class="col_title ">Edit</span>
@@ -73,7 +129,7 @@
             </div>
 
             <div class="cols col-3 image_container ">
-                <a id="image_link " href="about.html "><img id="menu_image " src="./img/main_menu-img/img7.jpg " alt="Menu Image "></a>
+                <a id="image_link" href="about.html "><img id="menu_image" src="./img/main_menu-img/img7.jpg " alt="Menu Image "></a>
 
             </div>
 
@@ -81,6 +137,30 @@
 
     </div>
 
+    <section class="main">
+        <div class="main_block-centr">
+            <a href="#"> <img class="main_img" src="./img/main_img/about-1.jpg" alt="main img"></a>
+            <h1 class="main_title"><a href="#"> New collection</a></h1>
+        </div>
+        <div class="main_block-img">
+            <div class="main_block-img_item"><img class="main_img" src="./img/main_img/about-2.jpg" alt="left block img"></div>
+            <div class="main_block-img_item"><img class="main_img" src="./img/main_img/about-3.jpg" alt="right block img"></div>
+        </div>
+
+    </section>
+
+    <footer>
+
+        <ul class="footer_list">
+            <li><a class="footer_item" href="#">About</a></li>
+            <li><a class="footer_item" href="#">Contact us</a></li>
+            <li><a class="footer_item" href="#">Delivery and payment</a></li>
+            <li><a class="footer_item" href="#">FAQ</a></li>
+            <li><a class="footer_item" href="#">Stocklist</a></li>
+            <li><a class="footer_item" href="#">Instagram</a></li>
+        </ul>
+
+    </footer>
 
 
 
@@ -91,6 +171,7 @@
 
 
 
+    <script defer src="scripts/script.js"></script>
 </body>
 
 </html>

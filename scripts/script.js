@@ -8,11 +8,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const necklagesItem = document.querySelector('.necklages_item');
     const necklagesList = document.querySelector('.necklages_list');
 
-    jewelleryMenuItem.addEventListener('click', function(event) {
-        event.preventDefault();
+    function disableBodyScroll() {
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Функція, яка дозволяє прокручування сторінки
+    function enableBodyScroll() {
+        document.body.style.overflow = '';
+    }
+
+    function openCategoryMenu() {
         jewelleryMenuItem.classList.toggle('active');
         categoryMenu.classList.toggle('show');
-    });
+        if (categoryMenu.classList.contains('show')) {
+            disableBodyScroll(); // Забороняємо прокручування сторінки
+        } else {
+            enableBodyScroll(); // Дозволяємо прокручування сторінки
+        }
+    }
+
+    jewelleryMenuItem.addEventListener('click', openCategoryMenu);
 
     earringsItem.addEventListener('click', function(event) {
         event.preventDefault();
@@ -30,6 +45,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// ---------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+    const jewelleryMenuItemMob = document.querySelector('.menu_item-mob:first-child');
+    const categoryMenuMob = document.querySelector('.mobile_menu-right');
+
+    function openCategoryMenu() {
+        jewelleryMenuItemMob.classList.toggle('active');
+        categoryMenuMob.classList.toggle('show');
+
+    }
+
+    jewelleryMenuItemMob.addEventListener('click', openCategoryMenu);
+});
 // ------------photo menu---------------
 
 document.addEventListener('DOMContentLoaded', function() {

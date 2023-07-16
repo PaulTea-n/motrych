@@ -17,6 +17,11 @@ nav {
   left: 40px;
   transform: translateY(-50%);
 }
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+}
 
 .main_logo {
   display: block;
@@ -30,9 +35,6 @@ nav {
 
 .menu_left {
   display: flex;
-  font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  line-height: 16px;
 }
 
 .menu_right {
@@ -42,6 +44,11 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   height: 16px;
+}
+@media (max-width: 900px) {
+  .menu_right {
+    right: 0px;
+  }
 }
 
 a {

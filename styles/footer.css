@@ -1,0 +1,38 @@
+footer {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_list {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.footer_list li {
+  margin-right: 40px;
+}
+
+.footer_item {
+  position: relative;
+}
+
+.footer_item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.footer_item:hover::before {
+  opacity: 1;
+}/*# sourceMappingURL=footer.css.map */
