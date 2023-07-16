@@ -1,0 +1,137 @@
+@charset "UTF-8";
+.category_menu {
+  margin-top: 66px;
+  display: none;
+}
+
+.category_menu.show {
+  display: block;
+}
+
+.category_menu-block {
+  display: flex;
+}
+
+.cols .col_title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.col_list {
+  margin-top: 12px;
+}
+
+.col_list li {
+  margin-bottom: 6px;
+}
+
+.col_list-item {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.col-1 {
+  position: absolute;
+  left: 40px;
+}
+
+.col-2 {
+  position: absolute;
+  left: 300px;
+}
+
+.col-3 {
+  position: absolute;
+  right: 40px;
+}
+
+.necklages_item,
+.earrings_item {
+  position: relative;
+}
+
+.earrings_list,
+.necklages_list {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  display: none;
+  position: relative;
+}
+
+.earrings_list.show,
+.necklages_list.show {
+  display: block;
+  margin-left: 14px;
+}
+
+.col_list-item.active .list_category {
+  display: block;
+}
+
+.list_category li {
+  margin-top: 6px;
+}
+
+.list_category-item {
+  position: relative;
+}
+
+.col_list li a::before,
+.necklages_item::before,
+.earrings_item::before,
+.list_category-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.col_list li a:hover::before,
+.list_category-item:hover::before,
+.necklages_item.active::before,
+.earrings_item.active::before {
+  opacity: 1;
+  width: 100%;
+}
+
+.image_container {
+  width: 320px;
+  /* Задайте ширину відповідно до потреб */
+  height: 330px;
+  /* Задайте висоту відповідно до потреб */
+  overflow: hidden;
+}
+
+.image_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.language_button {
+  border: none;
+  background-color: white;
+  width: 26px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}
+
+.btn_en {
+  position: absolute;
+}
+
+.btn_ua {
+  position: absolute;
+}/*# sourceMappingURL=main.css.map */
