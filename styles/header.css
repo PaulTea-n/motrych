@@ -25,7 +25,6 @@ nav {
 
 .main_logo {
   display: block;
-  height: 51px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -88,4 +87,34 @@ a {
 .menu_item.active::before {
   opacity: 1;
   width: 100%;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 1px;
+  margin: 6px auto;
+  transition: all 0.3s ease;
+  background-color: #000000;
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 }/*# sourceMappingURL=header.css.map */

@@ -26,7 +26,6 @@ nav {
 
 .main_logo {
   display: block;
-  height: 51px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -91,6 +90,35 @@ a {
   width: 100%;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 1px;
+  margin: 6px auto;
+  transition: all 0.3s ease;
+  background-color: #000000;
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
 .category_menu {
   margin-top: 66px;
   display: none;
@@ -115,7 +143,7 @@ a {
   background: white;
 }
 
-.cols .col_title {
+.col_title {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 12px;
@@ -127,6 +155,11 @@ a {
 
 .col_list li {
   margin-bottom: 6px;
+}
+@media (max-width: 900px) {
+  .col_list li {
+    margin-bottom: 16px;
+  }
 }
 
 .col_list-item {
@@ -181,6 +214,11 @@ a {
 .list_category li {
   margin-top: 6px;
 }
+@media (max-width: 900px) {
+  .list_category li {
+    margin-top: 12px;
+  }
+}
 
 .list_category-item {
   position: relative;
@@ -211,11 +249,16 @@ a {
 .mobile_menu {
   margin-top: 66px;
   margin-left: 15px;
-  display: flex;
+  display: none;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 14px;
+  font-size: 12px;
+  line-height: 16px;
+  height: 100vh;
+}
+
+.mobile_menu.active {
+  display: flex;
 }
 
 .menu_item-mob {
