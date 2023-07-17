@@ -250,7 +250,7 @@ a {
 }
 
 .mobile_menu_wrapper {
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .mobile_menu {
@@ -262,11 +262,12 @@ a {
   font-size: 12px;
   line-height: 16px;
   height: 100vh;
-  margin-bottom: -100px;
+  overflow-y: auto;
 }
 
 .mobile_menu.active {
   display: flex;
+  height: 100vh;
 }
 
 .menu_left-mob li {
@@ -291,6 +292,7 @@ a {
 
 .mobile_menu-two {
   margin-top: 50px;
+  padding-bottom: 70px;
 }
 
 .image_container {
