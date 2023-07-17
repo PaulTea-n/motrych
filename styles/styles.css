@@ -249,6 +249,10 @@ a {
   width: 100%;
 }
 
+.mobile_menu_wrapper {
+  overflow-x: auto;
+}
+
 .mobile_menu {
   margin-top: 66px;
   margin-left: 15px;
@@ -258,6 +262,7 @@ a {
   font-size: 12px;
   line-height: 16px;
   height: 100vh;
+  margin-bottom: -100px;
 }
 
 .mobile_menu.active {
