@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     earringsItem.addEventListener('click', function(event) {
         event.preventDefault();
-        console.log("click");
+
         earringsList.classList.toggle('show');
         earringsItem.classList.toggle('active');
     });
 
     necklagesItem.addEventListener('click', function(event) {
         event.preventDefault();
-        console.log("click2");
+
         necklagesList.classList.toggle('show');
         necklagesItem.classList.toggle('active');
     });
@@ -49,18 +49,34 @@ document.addEventListener('DOMContentLoaded', function() {
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".mobile_menu");
 
+function disableBodyScroll() {
+    document.body.style.overflow = 'hidden';
+}
+
+function enableBodyScroll() {
+    document.body.style.overflow = '';
+}
+
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
+
+    if (navMenu.classList.contains('active')) {
+        disableBodyScroll(); // Забороняємо прокручування сторінки
+    } else {
+        enableBodyScroll(); // Дозволяємо прокручування сторінки
+    }
+
+
 });
 
 document.querySelectorAll(".nav-link").forEach((n) =>
     n.addEventListener("click", () => {
+        console.log("click3");
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     })
 );
-
 
 
 // ----------------------
@@ -69,10 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const jewelleryMenuItemMob = document.querySelector('.menu_item-mob:first-child');
     const categoryMenuMob = document.querySelector('.mobile_menu-right');
 
+
+
     function openCategoryMenu() {
         jewelleryMenuItemMob.classList.toggle('active');
         categoryMenuMob.classList.toggle('show');
-
     }
 
     jewelleryMenuItemMob.addEventListener('click', openCategoryMenu);

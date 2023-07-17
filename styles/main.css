@@ -104,6 +104,7 @@
   position: relative;
 }
 
+.menu_item-mob::before,
 .col_list li a::before,
 .necklages_item::before,
 .earrings_item::before,
@@ -118,6 +119,8 @@
   transition: opacity 0.3s ease-in-out;
 }
 
+.menu_item-mob:hover::before,
+.menu_item-mob.active::before,
 .col_list li a:hover::before,
 .list_category-item:hover::before,
 .necklages_item.active::before,
@@ -141,8 +144,12 @@
   display: flex;
 }
 
-.menu_item-mob {
+.menu_left-mob li {
   margin-bottom: 16px;
+}
+
+.menu_item-mob {
+  position: relative;
 }
 
 .mobile_menu-left {
