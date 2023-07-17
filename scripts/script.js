@@ -3,10 +3,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const jewelleryMenuItem = document.querySelector('.menu_item:first-child');
     const categoryMenu = document.querySelector('.category_menu');
-    const earringsItem = document.querySelector('.earrings_item');
-    const earringsList = document.querySelector('.earrings_list');
-    const necklagesItem = document.querySelector('.necklages_item');
-    const necklagesList = document.querySelector('.necklages_list');
+    const earringsItemRegular = document.querySelector('.category_menu .earrings_item');
+    const earringsListRegular = document.querySelector('.category_menu .earrings_list');
+    const earringsItemMobile = document.querySelector('.mobile_menu .earrings_item');
+    const earringsListMobile = document.querySelector('.mobile_menu .earrings_list');
+    const necklacesItemRegular = document.querySelector('.category_menu .necklages_item');
+    const necklacesListRegular = document.querySelector('.category_menu .necklages_list');
+    const necklacesItemMobile = document.querySelector('.mobile_menu .necklages_item');
+    const necklacesListMobile = document.querySelector('.mobile_menu .necklages_list');
 
     function disableBodyScroll() {
         document.body.style.overflow = 'hidden';
@@ -29,18 +33,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     jewelleryMenuItem.addEventListener('click', openCategoryMenu);
 
-    earringsItem.addEventListener('click', function(event) {
+    earringsItemRegular.addEventListener('click', function(event) {
         event.preventDefault();
-
-        earringsList.classList.toggle('show');
-        earringsItem.classList.toggle('active');
+        earringsListRegular.classList.toggle('show');
+        earringsItemRegular.classList.toggle('active');
+    });
+    earringsItemMobile.addEventListener('click', function(event) {
+        event.preventDefault();
+        earringsListMobile.classList.toggle('show');
+        earringsItemMobile.classList.toggle('active');
     });
 
-    necklagesItem.addEventListener('click', function(event) {
+    necklacesItemRegular.addEventListener('click', function(event) {
         event.preventDefault();
-
-        necklagesList.classList.toggle('show');
-        necklagesItem.classList.toggle('active');
+        necklacesListRegular.classList.toggle('show');
+        necklacesItemRegular.classList.toggle('active');
+    });
+    necklacesItemMobile.addEventListener('click', function(event) {
+        event.preventDefault();
+        necklacesListMobile.classList.toggle('show');
+        necklacesItemMobile.classList.toggle('active');
     });
 
 });
@@ -48,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // ---------------------
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".mobile_menu");
+
+
 
 function disableBodyScroll() {
     document.body.style.overflow = 'hidden';
@@ -69,6 +83,13 @@ hamburger.addEventListener("click", () => {
 
 
 });
+
+
+
+
+
+
+
 
 document.querySelectorAll(".nav-link").forEach((n) =>
     n.addEventListener("click", () => {
