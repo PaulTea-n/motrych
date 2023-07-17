@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ---------------------
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".mobile_menu");
+const navMenu = document.querySelector(".mobile_menu_wrapper");
 
 
 

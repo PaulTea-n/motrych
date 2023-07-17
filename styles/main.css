@@ -130,24 +130,31 @@
 }
 
 .mobile_menu_wrapper {
-  overflow-x: hidden;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.mobile_menu_wrapper.active {
+  display: flex;
 }
 
 .mobile_menu {
   margin-top: 66px;
-  margin-left: 15px;
-  display: none;
+  display: flex;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  height: 100vh;
+  flex-grow: 1;
   overflow-y: auto;
-}
-
-.mobile_menu.active {
-  display: flex;
-  height: 100vh;
+  background-color: white;
 }
 
 .menu_left-mob li {
@@ -160,6 +167,7 @@
 
 .mobile_menu-left {
   margin-right: 50px;
+  margin-left: 15px;
 }
 
 .mobile_menu-right {

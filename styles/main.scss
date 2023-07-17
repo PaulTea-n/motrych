@@ -129,26 +129,42 @@
 
     // --------------mob menu-----------------
     .mobile_menu_wrapper {
-        overflow-x: hidden;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-color: white;
+        overflow-y: auto;
+    }
+
+    .mobile_menu_wrapper.active {
+        display: flex;
     }
 
     .mobile_menu {
         margin-top: 66px;
-        margin-left: 15px;
-        display: none;
+        display: flex;
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
-        height: 100vh;
+        flex-grow: 1;
         overflow-y: auto;
+        background-color: white;
     }
 
-    .mobile_menu.active {
-        display: flex;
-        height: 100vh;
-    }
-
+    // .mobile_menu.active {
+    //     height: 100vh;
+    //     position: absolute;
+    //     left: 0px;
+    //     right: 0;
+    //     background-color: white;
+    //     z-index: 10;
+    //     top: 0;
+    // }
     .menu_left-mob li {
         margin-bottom: 16px;
     }
@@ -159,6 +175,7 @@
 
     .mobile_menu-left {
         margin-right: 50px;
+        margin-left: 15px;
     }
 
     .mobile_menu-right {
