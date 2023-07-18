@@ -64,6 +64,10 @@ a {
     line-height: 16px;
     position: relative;
     cursor: pointer;
+
+    @media(max-width: 900px) {
+        margin: 0px 10px 0px 0px;
+    }
 }
 
 .cart_img {
