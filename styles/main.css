@@ -207,6 +207,7 @@
 
 .main {
   margin-top: 66px;
+  flex-grow: 1;
 }
 
 .main_block-centr {
