@@ -182,3 +182,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+// =============================FAQ==================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all the question elements
+    const questions = document.querySelectorAll('.faq_btn');
+
+    // Add a click event listener to each question
+    questions.forEach(question => {
+        question.addEventListener('click', function() {
+            // Toggle the visibility of the answer and the arrow orientation
+            const answer = this.nextElementSibling;
+            const arrow = this.querySelector('.arrow');
+            answer.classList.toggle('show');
+            arrow.classList.toggle('show');
+
+            // Close other answers if open
+            questions.forEach(item => {
+                if (item !== this) {
+                    const otherAnswer = item.nextElementSibling;
+                    const otherArrow = item.querySelector('.arrow');
+                    otherAnswer.classList.remove('show');
+                    otherArrow.classList.remove('show');
+                }
+            });
+        });
+    });
+});
