@@ -17,6 +17,12 @@
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .faq_container {
+    width: 100vw;
+    margin: 40px 15px;
+  }
+}
 
 .faq_title {
   font-size: 16px;
@@ -61,13 +67,14 @@
   left: 0px;
   right: 0px;
   border-bottom: 1px solid #000;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .faq_btn {
   font-size: 14px;
   cursor: pointer;
   display: block;
+  margin-right: 10px;
 }
 
 .faq_wrap {
@@ -81,8 +88,8 @@
 }
 
 .faq_text {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .arrow {
