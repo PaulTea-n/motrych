@@ -1,0 +1,51 @@
+ .stockist {
+     margin-top: 66px;
+     font-family: 'Open Sans', sans-serif;
+     font-size: 12px;
+     line-height: 14px;
+     color: black;
+     display: flex;
+     justify-content: center;
+     flex-grow: 1;
+ }
+
+ .stockist_container {
+     width: 40vw;
+     margin: 40px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+     @media(max-width: 900px) {
+         width: 80vw;
+         margin: 40px 15px;
+     }
+
+     @media(max-width: 500px) {
+         width: 100vw;
+     }
+ }
+
+ .stockist_title {
+     font-family: 'Open Sans', sans-serif;
+     font-size: 20px;
+     line-height: 14px;
+     color: black;
+     font-weight: 400;
+     margin-bottom: 60px;
+     text-align: center;
+
+     @media(max-width: 900px) {
+         margin-bottom: 40px;
+     }
+ }
+
+ .shop_name {
+     font-size: 14px;
+     font-weight: 600;
+     margin-bottom: 20px;
+ }
+
+ .stockist_shop {
+     text-align: center;
+ }

@@ -1,15 +1,4 @@
-@charset "UTF-8";
-body,
-html {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  /* Мінімальна висота сторінки */
-  display: flex;
-  flex-direction: column;
-}
-
-.contacts {
+.stockist {
   margin-top: 66px;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
@@ -20,25 +9,26 @@ html {
   flex-grow: 1;
 }
 
-.contacts_container {
+.stockist_container {
   width: 40vw;
   margin: 40px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 @media (max-width: 900px) {
-  .contacts_container {
+  .stockist_container {
     width: 80vw;
     margin: 40px 15px;
   }
 }
 @media (max-width: 500px) {
-  .contacts_container {
+  .stockist_container {
     width: 100vw;
   }
 }
 
-.contacts_title {
+.stockist_title {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   line-height: 14px;
@@ -48,28 +38,17 @@ html {
   text-align: center;
 }
 @media (max-width: 900px) {
-  .contacts_title {
+  .stockist_title {
     margin-bottom: 40px;
   }
 }
 
-.contacts_text {
-  margin-bottom: 70px;
-}
-
-.contacts_block {
-  display: flex;
-  flex-direction: column;
-}
-
-.mail_block {
-  margin-bottom: 30px;
-}
-
-.contact_block-title {
+.shop_name {
+  font-size: 14px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
-.contact_block-item {
-  margin-top: 10px;
-}/*# sourceMappingURL=contacts.css.map */
+.stockist_shop {
+  text-align: center;
+}/*# sourceMappingURL=stockist.css.map */

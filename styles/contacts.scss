@@ -21,22 +21,27 @@ html {
 }
 
 .contacts_container {
-    width: 600px;
-    margin-top: 50px;
+    width: 40vw;
+    margin: 40px;
     display: flex;
     flex-direction: column;
 
+    @media(max-width: 900px) {
+        width: 80vw;
+        margin: 40px 15px;
+    }
+
     @media(max-width: 500px) {
-        margin: 50px 15px;
+        width: 100vw;
     }
 }
 
 .contacts_title {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 14px;
     color: black;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 60px;
     text-align: center;
 

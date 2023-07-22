@@ -209,3 +209,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// ===========================Change size=======================
+document.addEventListener('DOMContentLoaded', function() {
+
+    const toggleSize = document.getElementById('toggle-size');
+    const productList = document.querySelector('.product_list');
+    const productItem = document.querySelectorAll('.product_item');
+    const productDetails = document.querySelectorAll('.product_details');
+
+    toggleSize.addEventListener('click', function() {
+        productList.classList.toggle('enlarge');
+        productItem.forEach(item => {
+            item.classList.toggle('enlarge');
+        });
+        productDetails.forEach(detail => {
+            detail.classList.toggle('enlarge');
+        });
+        const link = toggleSize.querySelector('a');
+
+        if (productList.classList.contains('enlarge')) {
+            link.textContent = 'Large';
+        } else {
+            link.textContent = 'Small';
+        }
+    });
+});
