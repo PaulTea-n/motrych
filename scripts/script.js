@@ -61,8 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".mobile_menu_wrapper");
 
-
-
 function disableBodyScroll() {
     document.body.style.overflow = 'hidden';
 }
@@ -83,13 +81,6 @@ hamburger.addEventListener("click", () => {
 
 
 });
-
-
-
-
-
-
-
 
 document.querySelectorAll(".nav-link").forEach((n) =>
     n.addEventListener("click", () => {
