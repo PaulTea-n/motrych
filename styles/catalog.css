@@ -168,13 +168,34 @@ input[type=radio]:checked + span::after {
   border: 1px solid #000;
 }
 
+.filter_block {
+  position: relative;
+}
+
 .filter_container {
   display: flex;
-  margin: 30px 0px 40px;
+  margin: 30px 0px 30px;
+}
+@media (max-width: 500px) {
+  .filter_container {
+    flex-direction: column;
+    margin: 30px 0px 20px;
+  }
 }
 
 .filter_list {
   margin-right: 90px;
+}
+@media (max-width: 500px) {
+  .filter_list {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .filter_size {
+    margin-bottom: 10px;
+  }
 }
 
 .filter_heading {
@@ -199,11 +220,18 @@ input[type=radio]:checked + span::after {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .sort-by_btn {
   position: absolute;
-  right: 40px;
+  right: 20px;
+}
+@media (max-width: 900px) {
+  .sort-by_btn {
+    right: 15px;
+  }
 }
 
 .sort-by_item {
@@ -212,5 +240,15 @@ input[type=radio]:checked + span::after {
 
 .sort-by_container {
   position: absolute;
-  right: 40px;
+  right: 20px;
+  top: 42px;
+}
+@media (max-width: 900px) {
+  .sort-by_container {
+    right: 15px;
+  }
+}
+
+.clear_btn {
+  margin-right: 10px;
 }/*# sourceMappingURL=catalog.css.map */
