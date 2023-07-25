@@ -176,19 +176,17 @@ document.addEventListener('DOMContentLoaded', function() {
 // =============================FAQ==================
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all the question elements
+
     const questions = document.querySelectorAll('.faq_btn');
 
-    // Add a click event listener to each question
     questions.forEach(question => {
         question.addEventListener('click', function() {
-            // Toggle the visibility of the answer and the arrow orientation
+
             const answer = this.nextElementSibling;
             const arrow = this.querySelector('.arrow');
             answer.classList.toggle('show');
             arrow.classList.toggle('show');
 
-            // Close other answers if open
             questions.forEach(item => {
                 if (item !== this) {
                     const otherAnswer = item.nextElementSibling;
@@ -223,5 +221,85 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             link.textContent = 'Small';
         }
+    });
+});
+
+// =============================filter========================
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtn = document.getElementById('filter_btn');
+    const filterContainer = document.querySelector('.filter_container');
+    const arrowIcon = document.querySelector('.arrow_filter img');
+    const overlay = document.querySelector('.overlay');
+    const sortOptions = document.querySelectorAll('input[name="sort-option"]');
+    const selectedSortOption = document.getElementById('selected-sort-option');
+    const applyButton = document.getElementById('apply-filters');
+    const clearButton = document.getElementById('clear-filters');
+    let selectedSortValue = null;
+
+    // // Функція для зміни стану галочки на input[type="radio"]
+    // function toggleRadioCheckbox(input) {
+    //     if (!input.disabled) {
+    //         input.checked = !input.checked;
+    //     }
+    // }
+
+    // // Додаємо обробник для кліку на label для галочок сортування
+    // const sortOptionLabels = document.querySelectorAll('input[name="sort-option"] + label');
+    // sortOptionLabels.forEach(label => {
+    //     label.addEventListener('click', function() {
+    //         const input = this.previousElementSibling;
+    //         toggleRadioCheckbox(input);
+    //     });
+    // });
+
+    // // Додаємо обробник для кліку на label для галочок фільтрації
+    // const filterLabels = document.querySelectorAll('.filter_metal input[type="radio"] + label');
+    // filterLabels.forEach(label => {
+    //     label.addEventListener('click', function() {
+    //         const input = this.previousElementSibling;
+    //         toggleRadioCheckbox(input);
+    //     });
+    // });
+
+    // При кліку на кнопку "Filter" відкривати або закривати контейнер з фільтрами та змінювати стан фону
+    filterBtn.addEventListener('click', function() {
+        filterContainer.classList.toggle('show');
+        overlay.style.display = filterContainer.classList.contains('show') ? 'block' : 'none';
+        document.body.style.overflow = filterContainer.classList.contains('show') ? 'hidden' : 'auto';
+
+        // Змінюємо клас для стрілочки
+        arrowIcon.classList.toggle('arrow_upside_down', filterContainer.classList.contains('show'));
+    });
+
+    // При кліку на варіант сортування оновлювати змінну selectedSortValue
+    sortOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            if (this.checked) {
+                selectedSortValue = this.value;
+            }
+        });
+    });
+
+    // При кліку на кнопку "Apply" відображати обраний варіант сортування та закривати контейнер з фільтрами
+    applyButton.addEventListener('click', function() {
+        if (selectedSortValue) {
+            selectedSortOption.textContent = `: ${selectedSortValue}`;
+        }
+        filterContainer.classList.remove('show');
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        arrowIcon.classList.remove('arrow_upside_down'); // Видаляємо клас, щоб стрілочка не була перевернута
+    });
+
+    // При кліку на кнопку "Clear" скидати обраний варіант сортування до значення за замовчуванням та знімати галочки з інпутів фільтрації
+    clearButton.addEventListener('click', function() {
+        selectedSortValue = null;
+        selectedSortOption.textContent = '';
+
+        // Скидаємо галочки з інпутів фільтрації
+        const filterOptions = document.querySelectorAll('input[type="radio"][name^="sort-option"], input[type="radio"][name^="c-"], input[type="radio"][name^="m-"], input[type="radio"][name^="s-"]');
+        filterOptions.forEach(option => {
+            option.checked = false;
+        });
     });
 });

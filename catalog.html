@@ -170,149 +170,162 @@
                 <a href="#" id="filter_btn" class="filter_btn">Filter
                         <span class="arrow_filter"><img src="./img/faq/material-symbols_arrow-forward-ios-rounded.svg" alt="arrow"></span>
                 </a>
-                <a href="#" id="sort-by_btn" class="sort-by_btn">Sort by
-                        <span class="arrow_filter"><img src="./img/faq/material-symbols_arrow-forward-ios-rounded.svg" alt="arrow"></span>
-                </a>
 
-                <div class="filter_container">
-                    <div class="filter_list fiter_category">
-                        <h1 class="filter_heading  category_heading">CATEGORY</h1>
-                        <ul class="category_list">
-                            <li class="category_item">
-                                <label for="c-earrings">
-                                    <input type="radio" id="c-earrings" value="earrings">
+                <a href="#" id="sort-by_btn" class="sort-by_btn">Sort by
+                    <span id="selected-sort-option"></span>
+                </a>
+                <div class="overlay">
+                    <div class="filter_container">
+                        <div class="filter_list fiter_category">
+                            <h1 class="filter_heading  category_heading">CATEGORY</h1>
+                            <ul class="category_list">
+                                <li class="category_item">
+                                    <label for="c-earrings">
+                                    <input type="radio" id="c-earrings" name="c-earrings" value="earrings">
                                     <span></span>
                                     Earrings
                                 </label>
-                            </li>
-                            <li class="category_item"><label for="c-necklaces">
-                                 <input type="radio" id="c-necklaces" value="necklaces">
+                                </li>
+                                <li class="category_item"><label for="c-necklaces">
+                                 <input type="radio" id="c-necklaces" name="c-necklaces" value="necklaces">
                                     <span></span>
                                     Necklaces
                                 </label></li>
-                            <li class="category_item"><label for="c-rings">
-                                 <input type="radio" id="c-rings" value="rings">
+                                <li class="category_item"><label for="c-rings">
+                                 <input type="radio" id="c-rings" name="c-rings" value="rings">
                                     <span></span>
                                     Rings
                                 </label></li>
-                            <li class="category_item"><label for="c-bracelets">
-                                <input type="radio" id="c-bracelets" value="bracelets">
+                                <li class="category_item"><label for="c-bracelets">
+                                <input type="radio" id="c-bracelets" name="c-bracelets" value="bracelets">
                                     <span></span>
                                     Bracelets
                                 </label></li>
-                            <li class="category_item"><label for="c-bags">
-                                <input type="radio" id="c-bags" value="bags">
+                                <li class="category_item"><label for="c-bags">
+                                <input type="radio" id="c-bags" name="c-bags" value="bags">
                                     <span></span>
                                     Bags
                                 </label></li>
-                        </ul>
-                    </div>
-                    <div class=" filter_list filter_metal">
-                        <h1 class="filter_heading metal_heading">METAL</h1>
-                        <ul class="metal_list">
-                            <li class="metal_item">
-                                <label for="m-silver">
-                                    <input type="radio" id="m-silver" value="silver">
+                            </ul>
+                        </div>
+                        <div class=" filter_list filter_metal">
+                            <h1 class="filter_heading metal_heading">METAL</h1>
+                            <ul class="metal_list">
+                                <li class="metal_item">
+                                    <label for="m-silver">
+                                    <input type="radio" id="m-silver" name="m-silver" value="silver">
                                     <span></span>
                                     Silver
                                 </label>
-                            </li>
-                            <li class="metal_item"><label for="m-silver_with_golding">
-                                <input type="radio" id="m-silver_with_golding" value="silver_with_golding">
+                                </li>
+                                <li class="metal_item"><label for="m-silver_with_golding">
+                                <input type="radio" id="m-silver_with_golding" name="m-silver_with_golding" value="silver_with_golding">
                                     <span></span>
                                     Silver with golding
                                 </label></li>
-                            <li class="metal_item"><label for="m-rhodium_silver">
-                                <input type="radio" id="m-rhodium_silver" value="rhodium_silver">
+                                <li class="metal_item"><label for="m-rhodium_silver">
+                                <input type="radio" id="m-rhodium_silver" name="m-rhodium_silver" value="rhodium_silver">
                                     <span></span>
                                     Rhodium silver 
                                 </label></li>
-                        </ul>
-                    </div>
-                    <div class="filter_list filter_size">
-                        <h1 class="filter_heading size_heading">SIZE</h1>
-                        <ul class="size_list">
-                            <li class="size_item">
-                                <label for="s-15.5">
-                                    <input type="radio" id="s-15.5" value="15.5">
+                            </ul>
+                        </div>
+                        <div class="filter_list filter_size">
+                            <h1 class="filter_heading size_heading">SIZE</h1>
+                            <ul class="size_list">
+                                <li class="size_item">
+                                    <label for="s-15.5">
+                                    <input type="radio" id="s-15.5" name="s-15.5" value="15.5">
                                     <span></span>
                                     15.5
                                 </label>
-                            </li>
-                            <li class="size_item">
-                                <label for="s-16">
-                                    <input type="radio" id="s-16" value="16">
+                                </li>
+                                <li class="size_item">
+                                    <label for="s-16">
+                                    <input type="radio" id="s-16" name="s-16" value="16">
                                     <span></span>
                                     16
                                 </label>
-                            </li>
-                            <li class="size_item">
-                                <label for="s-16.5">
-                                    <input type="radio" id="s-16.5" value="16.5">
+                                </li>
+                                <li class="size_item">
+                                    <label for="s-16.5">
+                                    <input type="radio" id="s-16.5" name="s-16.5" value="16.5">
                                     <span></span>
                                     16.5
                                 </label>
-                            </li>
-                            <li class="size_item">
-                                <label for="s-17">
-                                    <input type="radio" id="s-17" value="17">
+                                </li>
+                                <li class="size_item">
+                                    <label for="s-17">
+                                    <input type="radio" id="s-17" name="s-17" value="17">
                                     <span></span>
                                     17
                                 </label>
-                            </li>
-                            <li class="size_item">
-                                <label for="s-17.5">
-                                    <input type="radio" id="s-17.5" value="17.5">
+                                </li>
+                                <li class="size_item">
+                                    <label for="s-17.5">
+                                    <input type="radio" id="s-17.5" name="s-17.5" value="17.5">
                                     <span></span>
                                     17.5
                                 </label>
-                            </li>
-                            <li class="size_item">
-                                <label for="s-18">
-                                    <input type="radio" id="s-18" value="18">
+                                </li>
+                                <li class="size_item">
+                                    <label for="s-18">
+                                    <input type="radio" id="s-18" name="s-18" value="18">
                                     <span></span>
                                     18
                                 </label>
-                            </li>
-                            <li class="size_item">
-                                <label for="s-18.5">
-                                    <input type="radio" id="s-18.5" value="18.5">
+                                </li>
+                                <li class="size_item">
+                                    <label for="s-18.5">
+                                    <input type="radio" id="s-18.5" name="s-18.5" value="18.5">
                                     <span></span> 
                                     18.5
                                 </label>
-                            </li>
-                            <li class="size_item">
-                                <label for="s-19">
-                                    <input type="radio" id="s-19" value="19">
+                                </li>
+                                <li class="size_item">
+                                    <label for="s-19">
+                                    <input type="radio" id="s-19" name="s-19" value="19">
                                     <span></span>
                                     19
                                 </label>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sort-by_container">
+                            <ul class="sort-by_list">
+                                <li class="sort-by_item">
+                                    <label for="no-sorting">
+                                <input type="radio" id="no-sorting" name="sort-option" value=" No sorting">
+                                <span></span>
+                                No sorting
+                                </label>
+                                </li>
+                                <li class="sort-by_item">
+                                    <label for="ascending">
+                                <input type="radio" id="ascending" name="sort-option" value=" Ascending price">
+                                <span></span>
+                                Ascending price
+                                </label>
+                                </li>
+                                <li class="sort-by_item">
+                                    <label for="descending">
+                                <input type="radio" id="descending" name="sort-option" value=" Descending price">
+                                <span></span>
+                                Descending price
+                                </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter_btn-collection">
+                            <a href="#" id="clear-filters" class="clear_btn">CLEAR</a>
+                            <a href="#" id="apply-filters" class="apply_btn">APPLY</a>
+                        </div>
                     </div>
                 </div>
-                <div class="filter_btn-collection">
-                    <a href="#" id="clear-filters" class="clear_btn">CLEAR</a>
-                    <a href="#" id="apply-filters" class="apply_btn">APPLY</a>
-                </div>
-                <div class="sort-by_container">
-                    <ul class="sort-by_list">
-                        <li class="sort-by_item">
-                            <label for="ascending">
-                                    <input type="radio" id="ascending" value="ascending">
-                                    <span></span> 
-                                    Ascending price
-                                </label>
-                        </li>
-                        <li class="sort-by_item">
-                            <label for="descending">
-                                    <input type="radio" id="descending" value="descending">
-                                    <span></span>
-                                    Descending price
-                                </label>
-                        </li>
-                    </ul>
-                </div>
+
+
+
+
             </div>
 
             <ul class="product_list">
