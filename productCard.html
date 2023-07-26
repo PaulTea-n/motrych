@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motrych </title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" type="image/png" href="./img/MOTRYCHSTUDIO — LOGO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu_left">
+                <li class="menu_item"><a href="#">JEWELLERY</a></li>
+                <li class="menu_item"><a href="#">OBJECTS</a></li>
+                <li class="menu_item"><a href="#">FILMS</a></li>
+            </ul>
+        </nav>
+
+
+
+        <!-- ------------------ -->
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+
+        <!-- --------------------------- -->
+
+
+        <a class="main_logo" href="index.html"><img src="./img/MOTRYCHSTUDIO — LOGO 1.svg" alt="logo"></a>
+        <ul class="menu_right">
+            <li class="menu_item">
+                <button class="language_button" id="languageSwitcher" onclick="toggleLanguage() ">EN</button>
+            </li>
+            <li class="menu_item cart_img ">
+                <a href="# "><img src="./img/Icon _ Bag.svg " alt="cart-img "></a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- ---------------mob menu-------------------- -->
+    <div class="mobile_menu_wrapper">
+        <div class="mobile_menu">
+            <div class="mobile_menu-left">
+                <ul class="menu_left-mob">
+                    <li><a class="menu_item-mob" href="#">JEWELLERY</a></li>
+                    <li><a class="menu_item-mob" href="#">OBJECTS</a></li>
+                    <li><a class="menu_item-mob" href="#">FILMS</a></li>
+                </ul>
+            </div>
+
+
+            <div class="mobile_menu-right">
+                <div class="mobile_menu-one">
+                    <span class="col_title ">Edit</span>
+                    <ul class="col_list ">
+                        <li class="menu_img-item " data-image="./img/main_menu-img/img1.jpg "><a class="col_list-item " href="# ">NEW COLLECTION</a></li>
+                        <li class="menu_img-item " data-image="./img/main_menu-img/img2.jpg "><a class="col_list-item " href="# ">IN STOCK</a></li>
+                        <li class="menu_img-item " data-image="./img/main_menu-img/img3.jpg "><a class="col_list-item " href="# ">CLEAR BLUE SKY</a></li>
+                        <li class="menu_img-item " data-image="./img/main_menu-img/img4.jpg "><a class="col_list-item " href="# ">ALL PRODUCTS</a></li>
+                    </ul>
+                </div>
+
+                <div class="mobile_menu-two">
+                    <span class="col_title ">Categories</span>
+                    <ul class="col_list ">
+                        <li class="menu_img-item " data-image="./img/main_menu-img/img2.jpg "><a class=" col_list-item earrings_item " href="# ">EARRINGS</a>
+                            <ul class="list_category earrings_list ">
+                                <li><a class="list_category-item " href="# ">View All</a></li>
+                                <li><a class="list_category-item " href="# ">Studs</a></li>
+                                <li><a class="list_category-item " href="# ">Cuffs</a></li>
+                                <li><a class="list_category-item " href="# ">Drops</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_img-item " data-image="./img/main_menu-img/img3.jpg "><a class="col_list-item necklages_item " href="# ">NECKLACES</a>
+                            <ul class="list_category necklages_list ">
+                                <li><a class="list_category-item " href="# ">View All</a></li>
+                                <li><a class="list_category-item " href="# ">Chains</a></li>
+                                <li><a class="list_category-item " href="# ">Collar</a></li>
+                                <li><a class="list_category-item " href="# ">Pendants</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_img-item " data-image="./img/main_menu-img/img4.jpg "><a class="col_list-item " href="# ">RINGS</a></li>
+                        <li class="menu_img-item " data-image="./img/main_menu-img/img5.jpg "><a class="col_list-item " href="# ">BRACELETS</a></li>
+                        <li class="menu_img-item " data-image="./img/main_menu-img/img6.jpg "><a class="col_list-item " href="# ">BAGS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- ------------------------------------------- -->
+
+    <div class="category_menu">
+        <div class="category_menu-block ">
+            <div class="cols col-1 ">
+                <span class="col_title ">Edit</span>
+                <ul class="col_list ">
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img1.jpg "><a class="col_list-item " href="catalog.html">NEW COLLECTION</a></li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img2.jpg "><a class="col_list-item " href="# ">IN STOCK</a></li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img3.jpg "><a class="col_list-item " href="# ">CLEAR BLUE SKY</a></li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img4.jpg "><a class="col_list-item " href="# ">ALL PRODUCTS</a></li>
+                </ul>
+            </div>
+            <div class="cols col-2 ">
+                <span class="col_title ">Categories</span>
+                <ul class="col_list ">
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img2.jpg "><a class=" col_list-item earrings_item " href="# ">EARRINGS</a>
+                        <ul class="list_category earrings_list ">
+                            <li><a class="list_category-item " href="# ">View All</a></li>
+                            <li><a class="list_category-item " href="# ">Studs</a></li>
+                            <li><a class="list_category-item " href="# ">Cuffs</a></li>
+                            <li><a class="list_category-item " href="# ">Drops</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img3.jpg "><a class="col_list-item necklages_item " href="# ">NECKLACES</a>
+                        <ul class="list_category necklages_list ">
+                            <li><a class="list_category-item " href="# ">View All</a></li>
+                            <li><a class="list_category-item " href="# ">Chains</a></li>
+                            <li><a class="list_category-item " href="# ">Collar</a></li>
+                            <li><a class="list_category-item " href="# ">Pendants</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img4.jpg "><a class="col_list-item " href="# ">RINGS</a></li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img5.jpg "><a class="col_list-item " href="# ">BRACELETS</a></li>
+                    <li class="menu_img-item " data-image="./img/main_menu-img/img6.jpg "><a class="col_list-item " href="# ">BAGS</a></li>
+                </ul>
+            </div>
+
+            <div class="cols col-3 image_container ">
+                <a id="image_link" href="about.html "><img id="menu_image" src="./img/main_menu-img/img7.jpg " alt="Menu Image "></a>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- -------------------------------- -->
+    <section class="product_card">
+        <div class="product_card_container">
+            <div class="main_container">
+                <div class="left_content">
+                    <div class="top_block">
+                        <div class="page_navigation">
+                            <a href="/">Home</a>
+                            <span class="slesh">|</span>
+                            <a href="#">PIN EAR CUFF</a>
+                        </div>
+                    </div>
+                    <div class="photo_block-mini">
+                        <ul>
+                            <li>
+                                <a class="photo_mini" href="#photo-1"> <img src="./img/productCard/PerfumeChoker_03_Final_CROP_300x.webp" alt="product photo"></a>
+                            </li>
+                            <li>
+                                <a class="photo_mini" href="#photo-2"><img src="./img/productCard/PyramidCuff_08_Final_CROP_300x.webp" alt="product photo"></a>
+                            </li>
+                            <li>
+                                <a class="photo_mini" href="#photo-3"><img src="./img/productCard/ScrollBelt_01_BW_Final_CROP_300x.jpg" alt="product photo"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="middle_content">
+                    <ul class="product_galeri">
+                        <li>
+                            <a class="anchor_photo" name="photo-1"></a>
+                            <img class="middle_photo" src="./img/productCard/PerfumeChoker_03_Final_CROP_300x.webp" alt="product photo">
+                        </li>
+                        <li>
+                            <a class="anchor_photo" name="photo-2"></a>
+                            <img class="middle_photo" src="./img/productCard/PyramidCuff_08_Final_CROP_300x.webp" alt="product photo">
+                        </li>
+                        <li>
+                            <a class="anchor_photo" name="photo-3"></a>
+                            <img class="middle_photo" src="./img/productCard/ScrollBelt_01_BW_Final_CROP_300x.jpg" alt="product photo">
+                        </li>
+                    </ul>
+                    <!-- mobile swiper -->
+
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"> <img class="middle_photo" src="./img/productCard/PerfumeChoker_03_Final_CROP_300x.webp" alt="product photo"></div>
+                            <div class="swiper-slide"><img class="middle_photo" src="./img/productCard/PyramidCuff_08_Final_CROP_300x.webp" alt="product photo"></div>
+                            <div class="swiper-slide"><img class="middle_photo" src="./img/productCard/ScrollBelt_01_BW_Final_CROP_300x.jpg" alt="product photo"></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+
+                    <!-- ------------- -->
+                </div>
+                <div class="right_content">
+                    <h1 class="product_title">PIN EAR CUFF</h1>
+                    <p class="product_prise">5,000 UAN</p>
+                    <p class="product_text">A SIMPLE EAR CUFF THAT IMITATES A PIN FOR EVERYDAY WEAR. iT CONSISTS OF TWO PARTS: PIN AND FREE-TO-MOVE CUFF</p>
+
+                    <div class="materials_inform">
+                        <h1 class="materials_title">Material</h1>
+                        <p class="materials_text">925 Silvers with golding </p>
+                    </div>
+
+                    <div class="product_information-block">
+                        <div class="info_row">
+                            <a href="#" class="info_btn">Details
+                            <span class="arrow_info"><img src="./img/faq/material-symbols_arrow-forward-ios-rounded.svg" alt="arrow"></span>
+                            </a>
+                            <div class="info_wrap">
+                                <ul class="info_text">
+                                    <li>Sterling silver</li>
+                                    <li>6.7 g</li>
+                                    <li>65 mml</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="info_row">
+                            <a href="#" class="info_btn">SIZE GUIDE
+                            <span class="arrow_info"><img src="./img/faq/material-symbols_arrow-forward-ios-rounded.svg" alt="arrow"></span>
+                            </a>
+                            <div class="info_wrap">
+                                <ul class="info_text">
+                                    <li>16</li>
+                                    <li>16.5</li>
+                                    <li>17</li>
+                                    <li>17.5</li>
+                                    <li>18</li>
+                                </ul>
+                                <p class="info_details">if your size is not available, contact us and we will make it for you within 5-7 days</p>
+                            </div>
+
+                        </div>
+                        <div class="info_row">
+                            <a href="#" class="info_btn">Care
+                            <span class="arrow_info"><img src="./img/faq/material-symbols_arrow-forward-ios-rounded.svg" alt="arrow"></span>
+                            </a>
+                            <div class="info_wrap">
+                                <p class="info_text">Jewelry should be removed prior to bathing, showering, washing hands, swimming, exercising, and applying perfume, hairspray, or lotion, as exposure to moisture or chemicals may cause tarnishing to occur faster. For more
+                                    information, please see our FAQ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="addToCart">ADD TO CART</button>
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <ul class="footer_list">
+            <li><a class="footer_item" href="about.html">About</a></li>
+            <li><a class="footer_item" href="contacts.html">Contact us</a></li>
+            <li><a class="footer_item" href="delivery.html">Delivery and payment</a></li>
+            <li><a class="footer_item" href="faq.html">FAQ</a></li>
+            <li><a class="footer_item" href="stockist.html">Stockist</a></li>
+            <li><a class="footer_item" href="https://instagram.com/motrychstudio?igshid=MzRlODBiNWFlZA==" target="_blank">Instagram</a></li>
+        </ul>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script defer src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+
+</html>

@@ -236,31 +236,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearButton = document.getElementById('clear-filters');
     let selectedSortValue = null;
 
-    // // Функція для зміни стану галочки на input[type="radio"]
-    // function toggleRadioCheckbox(input) {
-    //     if (!input.disabled) {
-    //         input.checked = !input.checked;
-    //     }
-    // }
-
-    // // Додаємо обробник для кліку на label для галочок сортування
-    // const sortOptionLabels = document.querySelectorAll('input[name="sort-option"] + label');
-    // sortOptionLabels.forEach(label => {
-    //     label.addEventListener('click', function() {
-    //         const input = this.previousElementSibling;
-    //         toggleRadioCheckbox(input);
-    //     });
-    // });
-
-    // // Додаємо обробник для кліку на label для галочок фільтрації
-    // const filterLabels = document.querySelectorAll('.filter_metal input[type="radio"] + label');
-    // filterLabels.forEach(label => {
-    //     label.addEventListener('click', function() {
-    //         const input = this.previousElementSibling;
-    //         toggleRadioCheckbox(input);
-    //     });
-    // });
-
     // При кліку на кнопку "Filter" відкривати або закривати контейнер з фільтрами та змінювати стан фону
     filterBtn.addEventListener('click', function() {
         filterContainer.classList.toggle('show');
@@ -302,4 +277,17 @@ document.addEventListener('DOMContentLoaded', function() {
             option.checked = false;
         });
     });
+});
+
+// =========swiper slider===========
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
 });
