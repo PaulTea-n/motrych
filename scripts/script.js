@@ -291,3 +291,28 @@ const swiper = new Swiper('.swiper', {
     },
 
 });
+
+// =======================product card inform============
+document.addEventListener('DOMContentLoaded', function() {
+
+    const questions = document.querySelectorAll('.info_btn');
+
+    questions.forEach(question => {
+        question.addEventListener('click', function() {
+
+            const answer = this.nextElementSibling;
+            const arrowInfo = this.querySelector('.arrow_info');
+            answer.classList.toggle('show');
+            arrowInfo.classList.toggle('show');
+
+            questions.forEach(item => {
+                if (item !== this) {
+                    const otherAnswer = item.nextElementSibling;
+                    const otherArrow = item.querySelector('.arrow_info');
+                    otherAnswer.classList.remove('show');
+                    otherArrow.classList.remove('show');
+                }
+            });
+        });
+    });
+});
