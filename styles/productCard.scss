@@ -111,7 +111,6 @@ section {
 // -------------------
 .swiper_block {
     width: 100%;
-    background-color: aqua;
     display: none;
 
     @media(max-width: 600px) {
@@ -119,11 +118,46 @@ section {
     }
 }
 
+.swiper-slide {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+    width: 5px;
+    height: 5px;
+    margin: 0 3px;
+    border: 1px solid #222;
+    background: transparent;
+    background: #eee;
+    opacity: 1;
+}
+
 // ---------------------
 .product_information-block {
     @media(max-width: 600px) {
         position: relative;
-        margin-top: 60px;
     }
 }
 
@@ -166,6 +200,10 @@ section {
 
 .materials_inform {
     margin-bottom: 20px;
+
+    @media(max-width: 600px) {
+        margin-bottom: 30px;
+    }
 }
 
 .materials_text {
@@ -176,7 +214,7 @@ section {
     margin-bottom: 20px;
 
     @media(max-width: 600px) {
-        margin-right: 60px;
+        margin-bottom: 0px;
     }
 }
 
@@ -185,6 +223,7 @@ section {
         position: absolute;
         top: 0px;
         left: 0px;
+        color: #BFBCBA;
     }
 }
 
@@ -192,7 +231,8 @@ section {
     @media(max-width: 600px) {
         position: absolute;
         top: 0px;
-        right: 250px;
+        left: 114px;
+        color: #BFBCBA;
     }
 }
 
@@ -200,7 +240,8 @@ section {
     @media(max-width: 600px) {
         position: absolute;
         top: 0px;
-        right: 15px;
+        left: 248px;
+        color: #BFBCBA;
     }
 }
 
@@ -257,6 +298,12 @@ section {
 
 .info_wrap.show {
     display: block;
+
+    @media(max-width: 600px) {
+        .info_btn.two {
+            color: #000000;
+        }
+    }
 }
 
 .addToCart {
@@ -274,6 +321,6 @@ section {
 
     @media(max-width: 600px) {
         position: static;
-        margin-top: 40px;
+        margin-bottom: 30px;
     }
 }

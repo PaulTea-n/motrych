@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" href="./img/MOTRYCHSTUDIO — LOGO.png">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -202,13 +202,24 @@
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
-                            <div class="swiper-slide"> <img class="middle_photo" src="./img/productCard/PerfumeChoker_03_Final_CROP_300x.webp" alt="product photo"></div>
-                            <div class="swiper-slide"><img class="middle_photo" src="./img/productCard/PyramidCuff_08_Final_CROP_300x.webp" alt="product photo"></div>
-                            <div class="swiper-slide"><img class="middle_photo" src="./img/productCard/ScrollBelt_01_BW_Final_CROP_300x.jpg" alt="product photo"></div>
-                            ...
+                            <div class="swiper-slide">
+                                <div class="swiper-zoom-container">
+                                    <img class="middle_photo" src="./img/productCard/PerfumeChoker_03_Final_CROP_300x.webp" alt="product photo">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-zoom-container">
+                                    <img class="middle_photo" src="./img/productCard/PyramidCuff_08_Final_CROP_300x.webp" alt="product photo">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-zoom-container">
+                                    <img class="middle_photo" src="./img/productCard/ScrollBelt_01_BW_Final_CROP_300x.jpg" alt="product photo">
+                                </div>
+                            </div>
                         </div>
                         <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination custom-pagination"></div>
                     </div>
                 </div>
 
@@ -223,6 +234,9 @@
                         <h1 class="materials_title">Material</h1>
                         <p class="materials_text">925 Silvers with golding </p>
                     </div>
+
+                    <button class="addToCart">ADD TO CART</button>
+
 
                     <div class="product_information-block">
                         <div class="info_row">
@@ -264,7 +278,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="addToCart">ADD TO CART</button>
+
 
                 </div>
             </div>
@@ -301,7 +315,7 @@
 
 
     <script defer src="scripts/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>

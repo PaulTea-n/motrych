@@ -282,10 +282,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // =========swiper slider===========
 
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
     loop: true,
-
-    // If we need pagination
+    zoom: true,
     pagination: {
         el: '.swiper-pagination',
     },
@@ -298,7 +296,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const questions = document.querySelectorAll('.info_btn');
 
     questions.forEach(question => {
-        question.addEventListener('click', function() {
+        question.addEventListener('click', function(event) {
+            event.preventDefault();
 
             const answer = this.nextElementSibling;
             const arrowInfo = this.querySelector('.arrow_info');

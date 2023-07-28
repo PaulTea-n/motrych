@@ -776,7 +776,6 @@ section {
 
 .swiper_block {
   width: 100%;
-  background-color: aqua;
   display: none;
 }
 @media (max-width: 600px) {
@@ -785,10 +784,46 @@ section {
   }
 }
 
+.swiper-slide {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  width: 5px;
+  height: 5px;
+  margin: 0 3px;
+  border: 1px solid #222;
+  background: transparent;
+  background: #eee;
+  opacity: 1;
+}
+
 @media (max-width: 600px) {
   .product_information-block {
     position: relative;
-    margin-top: 60px;
   }
 }
 
@@ -833,6 +868,11 @@ section {
 .materials_inform {
   margin-bottom: 20px;
 }
+@media (max-width: 600px) {
+  .materials_inform {
+    margin-bottom: 30px;
+  }
+}
 
 .materials_text {
   font-size: 12px;
@@ -843,7 +883,7 @@ section {
 }
 @media (max-width: 600px) {
   .info_row {
-    margin-right: 60px;
+    margin-bottom: 0px;
   }
 }
 
@@ -852,6 +892,7 @@ section {
     position: absolute;
     top: 0px;
     left: 0px;
+    color: #BFBCBA;
   }
 }
 
@@ -859,7 +900,8 @@ section {
   .info_btn.two {
     position: absolute;
     top: 0px;
-    right: 250px;
+    left: 114px;
+    color: #BFBCBA;
   }
 }
 
@@ -867,7 +909,8 @@ section {
   .info_btn.three {
     position: absolute;
     top: 0px;
-    right: 15px;
+    left: 248px;
+    color: #BFBCBA;
   }
 }
 
@@ -927,6 +970,11 @@ section {
 .info_wrap.show {
   display: block;
 }
+@media (max-width: 600px) {
+  .info_wrap.show .info_btn.two {
+    color: #000000;
+  }
+}
 
 .addToCart {
   position: absolute;
@@ -944,7 +992,7 @@ section {
 @media (max-width: 600px) {
   .addToCart {
     position: static;
-    margin-top: 40px;
+    margin-bottom: 30px;
   }
 }
 
