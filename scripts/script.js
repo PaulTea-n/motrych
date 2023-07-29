@@ -292,7 +292,6 @@ const swiper = new Swiper('.swiper', {
 
 // =======================product card inform============
 document.addEventListener('DOMContentLoaded', function() {
-
     const questions = document.querySelectorAll('.info_btn');
 
     questions.forEach(question => {
@@ -304,14 +303,24 @@ document.addEventListener('DOMContentLoaded', function() {
             answer.classList.toggle('show');
             arrowInfo.classList.toggle('show');
 
+            // Додамо/видалимо клас "active" відповідно до стану блоку
+            this.classList.toggle('active');
+
             questions.forEach(item => {
                 if (item !== this) {
                     const otherAnswer = item.nextElementSibling;
                     const otherArrow = item.querySelector('.arrow_info');
                     otherAnswer.classList.remove('show');
                     otherArrow.classList.remove('show');
+                    item.classList.remove('active');
                 }
             });
         });
     });
+});
+// =============slider related============
+const swiperRelated = new Swiper('.swiper-container', {
+    slidesPerView: 2, // Встановлюємо автоматичну кількість слайдів, яка буде поміщатись на екран
+    spaceBetween: 20, // Відстань між слайдами
+
 });
