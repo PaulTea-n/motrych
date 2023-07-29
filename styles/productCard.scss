@@ -346,6 +346,7 @@ section {
 
 .swiper-container {
     display: none;
+    overflow: hidden;
 
     @media(max-width: 600px) {
         display: block;

@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // =============slider related============
 const swiperRelated = new Swiper('.swiper-container', {
-    slidesPerView: 2, // Встановлюємо автоматичну кількість слайдів, яка буде поміщатись на екран
-    spaceBetween: 20, // Відстань між слайдами
+    slidesPerView: 2,
+    spaceBetween: 20,
 
 });
