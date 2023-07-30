@@ -540,7 +540,7 @@ input[type=radio]:checked + span::after {
   margin: 30px 0px 30px;
   height: 400px;
   overflow-y: auto;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 @media (max-width: 700px) {
   .filter_container {
@@ -621,16 +621,17 @@ input[type=radio]:checked + span::after {
 
 .filter_btn-collection {
   position: absolute;
-  top: 190px;
+  top: 210px;
 }
 @media (max-width: 700px) {
   .filter_btn-collection {
     position: static;
+    margin-top: 20px;
   }
 }
 
 .clear_btn {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .overlay {
