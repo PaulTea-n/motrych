@@ -46,7 +46,7 @@
                 <button class="language_button" id="languageSwitcher" onclick="toggleLanguage() ">EN</button>
             </li>
             <li class="menu_item cart_img ">
-                <a href="# "><img src="./img/Icon _ Bag.svg " alt="cart-img "></a>
+                <a href="# " id="cartToggle"><img src="./img/Icon _ Bag.svg " alt="cart-img "></a>
             </li>
         </ul>
     </header>
@@ -151,6 +151,63 @@
         </div>
 
     </div>
+    <!-- -------cart---------- -->
+    <div class="cart_container">
+        <div class="cart_top">
+            <div>
+                <h1 class="cart_title">Cart</h1>
+                <span class="cart_title-quantity">(2)</span>
+            </div>
+            <a href="#"><img src="./img/close.svg" alt="close"></a>
+        </div>
+
+        <ul class="cart_list">
+            <li class="cart_item">
+                <div class="cart_left">
+                    <h1 class="cart_product-title">PIN EAR CUFF </h1>
+                    <p class="cart_product-inform">One Size | 925 Silvers with gilding</p>
+                    <p class="cart_product-prise">5,000 UAN</p>
+                    <div class="cart_quantity">
+                        <a class="subtract_btn">–</a>
+                        <span>1</span>
+                        <a class="add_btn">+</a>
+                    </div>
+                    <p class="cart_product-tags">Availability: In stock <br> Ships in 5-7 days</p>
+                </div>
+                <div class="cart_right">
+                    <a href="#"><img src="./img/productCard/PerfumeChoker_03_Final_CROP_300x.webp" alt="cart item img"></a>
+                </div>
+            </li>
+            <li class="cart_item">
+                <div class="cart_left">
+                    <h1 class="cart_product-title">PIN EAR CUFF </h1>
+                    <p class="cart_product-inform">One Size | 925 Silvers with gilding</p>
+                    <p class="cart_product-prise">5,000 UAN</p>
+                    <div class="cart_quantity">
+                        <a class="subtract_btn">–</a>
+                        <span>1</span>
+                        <a class="add_btn">+</a>
+                    </div>
+                    <p class="cart_product-tags">Availability: In stock <br> Ships in 5-7 days</p>
+                </div>
+                <div class="cart_right">
+                    <a href="#"><img src="./img/productCard/ScrollBelt_01_BW_Final_CROP_300x.jpg" alt="cart item img"></a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="cart_bottom">
+            <div class="cart_total">
+                <p class="total_left">TOTAL</p>
+                <p class="total_right">9,000 UAN</p>
+            </div>
+            <button class="cart_btn-checkout">Proceed to checkout</button>
+            <button class="cart_btn-contShop">Continue shopping</button>
+        </div>
+
+    </div>
+
+    <div class="cart_overlay"></div>
     <!-- -------------------------------- -->
     <section class="stockist">
         <div class="stockist_container">
@@ -190,6 +247,7 @@
 
 
     <script defer src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>
