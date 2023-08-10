@@ -200,95 +200,112 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // ===========================Change size=======================
 document.addEventListener('DOMContentLoaded', function() {
-
     const toggleSize = document.getElementById('toggle-size');
-    const productList = document.querySelector('.product_list');
-    const productItem = document.querySelectorAll('.product_item');
-    const productDetails = document.querySelectorAll('.product_details');
+    if (toggleSize) {
+        toggleSize.addEventListener('click', function() {
 
-    toggleSize.addEventListener('click', function() {
-        productList.classList.toggle('enlarge');
-        productItem.forEach(item => {
-            item.classList.toggle('enlarge');
-        });
-        productDetails.forEach(detail => {
-            detail.classList.toggle('enlarge');
-        });
-        const link = toggleSize.querySelector('a');
+            document.addEventListener('DOMContentLoaded', function() {
 
-        if (productList.classList.contains('enlarge')) {
-            link.textContent = 'Large';
-        } else {
-            link.textContent = 'Small';
-        }
-    });
+                const toggleSize = document.getElementById('toggle-size');
+                const productList = document.querySelector('.product_list');
+                const productItem = document.querySelectorAll('.product_item');
+                const productDetails = document.querySelectorAll('.product_details');
+
+                toggleSize.addEventListener('click', function() {
+                    productList.classList.toggle('enlarge');
+                    productItem.forEach(item => {
+                        item.classList.toggle('enlarge');
+                    });
+                    productDetails.forEach(detail => {
+                        detail.classList.toggle('enlarge');
+                    });
+                    const link = toggleSize.querySelector('a');
+
+                    if (productList.classList.contains('enlarge')) {
+                        link.textContent = 'Large';
+                    } else {
+                        link.textContent = 'Small';
+                    }
+                });
+            });
+        });
+    }
 });
-
 // =============================filter========================
+
 document.addEventListener('DOMContentLoaded', function() {
     const filterBtn = document.getElementById('filter_btn');
-    const filterContainer = document.querySelector('.filter_container');
-    const arrowIcon = document.querySelector('.arrow_filter img');
-    const overlay = document.querySelector('.overlay');
-    const sortOptions = document.querySelectorAll('input[name="sort-option"]');
-    const selectedSortOption = document.getElementById('selected-sort-option');
-    const applyButton = document.getElementById('apply-filters');
-    const clearButton = document.getElementById('clear-filters');
-    let selectedSortValue = null;
+    if (filterBtn) {
 
-    // При кліку на кнопку "Filter" відкривати або закривати контейнер з фільтрами та змінювати стан фону
-    filterBtn.addEventListener('click', function() {
-        filterContainer.classList.toggle('show');
-        overlay.style.display = filterContainer.classList.contains('show') ? 'block' : 'none';
-        document.body.style.overflow = filterContainer.classList.contains('show') ? 'hidden' : 'auto';
 
-        // Змінюємо клас для стрілочки
-        arrowIcon.classList.toggle('arrow_upside_down', filterContainer.classList.contains('show'));
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtn = document.getElementById('filter_btn');
+            const filterContainer = document.querySelector('.filter_container');
+            const arrowIcon = document.querySelector('.arrow_filter img');
+            const overlay = document.querySelector('.overlay');
+            const sortOptions = document.querySelectorAll('input[name="sort-option"]');
+            const selectedSortOption = document.getElementById('selected-sort-option');
+            const applyButton = document.getElementById('apply-filters');
+            const clearButton = document.getElementById('clear-filters');
+            let selectedSortValue = null;
 
-    // При кліку на варіант сортування оновлювати змінну selectedSortValue
-    sortOptions.forEach(option => {
-        option.addEventListener('click', function() {
-            if (this.checked) {
-                selectedSortValue = this.value;
-            }
+            // При кліку на кнопку "Filter" відкривати або закривати контейнер з фільтрами та змінювати стан фону
+            filterBtn.addEventListener('click', function() {
+                filterContainer.classList.toggle('show');
+                overlay.style.display = filterContainer.classList.contains('show') ? 'block' : 'none';
+                document.body.style.overflow = filterContainer.classList.contains('show') ? 'hidden' : 'auto';
+
+                // Змінюємо клас для стрілочки
+                arrowIcon.classList.toggle('arrow_upside_down', filterContainer.classList.contains('show'));
+            });
+
+            // При кліку на варіант сортування оновлювати змінну selectedSortValue
+            sortOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    if (this.checked) {
+                        selectedSortValue = this.value;
+                    }
+                });
+            });
+
+            // При кліку на кнопку "Apply" відображати обраний варіант сортування та закривати контейнер з фільтрами
+            applyButton.addEventListener('click', function() {
+                if (selectedSortValue) {
+                    selectedSortOption.textContent = `: ${selectedSortValue}`;
+                }
+                filterContainer.classList.remove('show');
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                arrowIcon.classList.remove('arrow_upside_down'); // Видаляємо клас, щоб стрілочка не була перевернута
+            });
+
+            // При кліку на кнопку "Clear" скидати обраний варіант сортування до значення за замовчуванням та знімати галочки з інпутів фільтрації
+            clearButton.addEventListener('click', function() {
+                selectedSortValue = null;
+                selectedSortOption.textContent = '';
+
+                // Скидаємо галочки з інпутів фільтрації
+                const filterOptions = document.querySelectorAll('input[type="radio"][name^="sort-option"], input[type="radio"][name^="c-"], input[type="radio"][name^="m-"], input[type="radio"][name^="s-"]');
+                filterOptions.forEach(option => {
+                    option.checked = false;
+                });
+            });
         });
-    });
 
-    // При кліку на кнопку "Apply" відображати обраний варіант сортування та закривати контейнер з фільтрами
-    applyButton.addEventListener('click', function() {
-        if (selectedSortValue) {
-            selectedSortOption.textContent = `: ${selectedSortValue}`;
-        }
-        filterContainer.classList.remove('show');
-        overlay.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        arrowIcon.classList.remove('arrow_upside_down'); // Видаляємо клас, щоб стрілочка не була перевернута
-    });
 
-    // При кліку на кнопку "Clear" скидати обраний варіант сортування до значення за замовчуванням та знімати галочки з інпутів фільтрації
-    clearButton.addEventListener('click', function() {
-        selectedSortValue = null;
-        selectedSortOption.textContent = '';
-
-        // Скидаємо галочки з інпутів фільтрації
-        const filterOptions = document.querySelectorAll('input[type="radio"][name^="sort-option"], input[type="radio"][name^="c-"], input[type="radio"][name^="m-"], input[type="radio"][name^="s-"]');
-        filterOptions.forEach(option => {
-            option.checked = false;
-        });
-    });
+    }
 });
-
 // =========swiper slider===========
 
-const swiper = new Swiper('.swiper', {
-    loop: true,
-    zoom: true,
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-});
+if (typeof Swiper !== 'undefined') {
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        zoom: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+}
 
 // =======================product card inform============
 document.addEventListener('DOMContentLoaded', function() {
@@ -319,8 +336,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // =============slider related============
-const swiperRelated = new Swiper('.swiper-container', {
-    slidesPerView: 2,
-    spaceBetween: 20,
-
-});
+if (typeof Swiper !== 'undefined') {
+    const swiperRelated = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        spaceBetween: 20,
+    });
+}

@@ -1,15 +1,21 @@
 // ==============cart====================
 // Знаходимо необхідні елементи
-const cartToggle = document.getElementById('cartToggle');
+const cartToggle = document.querySelectorAll('.cart_toggle'); // Змінили на querySelectorAll
 const cartContainer = document.querySelector('.cart_container');
 const cartOverlay = document.querySelector('.cart_overlay');
+const addToCartBtn = document.querySelector('.addToCart');
+
+// Оголошуємо змінну для ідентифікації кнопок, які відкривають кошик
+const cartTriggers = document.querySelectorAll('.cart_trigger');
 
 // Додаємо обробник події для кліку на кнопку кошика
-cartToggle.addEventListener('click', function(event) {
-    event.preventDefault();
-    cartContainer.classList.toggle('open');
-    cartOverlay.classList.toggle('active');
-    document.body.classList.toggle('noscroll');
+cartTriggers.forEach(function(trigger) {
+    trigger.addEventListener('click', function(event) {
+        event.preventDefault();
+        cartContainer.classList.toggle('open');
+        cartOverlay.classList.toggle('active');
+        document.body.classList.toggle('noscroll');
+    });
 });
 
 // Додаємо обробник події для кліку на кнопку закриття корзини
@@ -20,6 +26,10 @@ cartCloseBtn.addEventListener('click', function(event) {
     cartOverlay.classList.remove('active');
     document.body.classList.remove('noscroll');
 });
+
+
+
+
 // -----------counter---------------------
 
 window.addEventListener('click', function(event) {
@@ -33,14 +43,24 @@ window.addEventListener('click', function(event) {
 
     if (event.target.dataset.action === 'plus') {
         counter.innerText = ++counter.innerText;
+        // toggleCartStatus();
     }
 
     if (event.target.dataset.action === 'minus') {
-
         if (parseInt(counter.innerText) > 1) {
             counter.innerText = --counter.innerText;
+
+        } else if (parseInt(counter.innerText) === 1) {
+            event.target.closest('.cart_item').remove();
+            toggleCartStatus();
+            cartPrice();
         }
     }
+
+    if (event.target.hasAttribute('data-action') && event.target.closest('.cart_list')) {
+        cartPrice();
+    }
+
 
 });
 
@@ -53,7 +73,6 @@ window.addEventListener('click', function(event) {
         const card = event.target.closest('.product_card');
 
         const productInfo = {
-
             id: card.dataset.id,
             imgSrc: card.querySelector('.product-img').getAttribute('src'),
             title: card.querySelector('.product_title').innerText,
@@ -63,11 +82,21 @@ window.addEventListener('click', function(event) {
             // counter: card.querySelector('[data-counter]').innerText,
         }
 
-        const cartItemHTML = ` <li class="cart_item" data-id="${productInfo.id}">
+        // ----------------------------
+        const itemInCart = cartList.querySelector(`[data-id="${productInfo.id}"]`);
+
+        if (itemInCart) {
+            const counterElement = itemInCart.querySelector('[data-counter]');
+
+            counterElement.innerText = parseInt(counterElement.innerText) + 1;
+
+        } else {
+
+            const cartItemHTML = ` <li class="cart_item" data-id="${productInfo.id}">
                 <div class="cart_left">
                     <h1 class="cart_product-title">${productInfo.title}</h1>
                     <p class="cart_product-inform">One Size | ${productInfo.material}</p>
-                    <p class="cart_product-prise">${productInfo.price} UAN</p>
+                    <p class="cart_product-prise">${productInfo.price}</p>
 
                     <div class="cart_quantity">
                         <a class="subtract_btn" data-action="minus">–</a>
@@ -82,14 +111,21 @@ window.addEventListener('click', function(event) {
                 </div>
             </li>`;
 
+            cartList.insertAdjacentHTML('beforeend', cartItemHTML);
 
+        }
+        // статус кошика
+        toggleCartStatus();
 
-        cartList.insertAdjacentHTML('beforeend', cartItemHTML);
-
+        // загальна вартість
+        cartPrice();
 
     }
-
 });
+
+
+
+
 
 
 
